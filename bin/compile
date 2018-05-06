@@ -33,12 +33,15 @@ ENV_DIR=${3:-}
 
 
 echo "BUILD_DIR"
+echo  $BUILD_DIR
 ls $BUILD_DIR
 
 echo "CACHE_DIR"
+echo  $CACHE_DIR
 ls $CACHE_DIR
 
 echo "ENV_DIR"
+echo  ENV_DIR
 ls $ENV_DIR
 
 echo "pwd"
