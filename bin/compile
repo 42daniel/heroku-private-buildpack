@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+echo in comile script
+####### Configure environment
+
+set -o errexit    # always exit on error
+set -o pipefail   # don't ignore exit codes when piping output
+set -o posix      # more strict failures in subshells
+# set -x          # enable debugging
+
+# Configure directories
+bp_dir=$(cd $(dirname $0); cd ..; pwd)
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+
+# first we need to set up ssh
+sh scripts/add-sshkey.sh $ENV_DIR
+
+#!/usr/bin/env bash
+echo in comile script
+####### Configure environment
+
+set -o errexit    # always exit on error
+set -o pipefail   # don't ignore exit codes when piping output
+set -o posix      # more strict failures in subshells
+# set -x          # enable debugging
+
+# Configure directories
+bp_dir=$(cd $(dirname $0); cd ..; pwd)
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+
+
+echo "BUILD_DIR"
+ls $BUILD_DIR
+
+echo "CACHE_DIR"
+ls $CACHE_DIR
+
+echo "ENV_DIR"
+ls $ENV_DIR
+
+echo "pwd"
+pwd

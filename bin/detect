@@ -1,0 +1,10 @@
+#!/bin/sh
+# we'll expect a file that lists the private buildpacks to apply
+
+# this pack is valid for apps with a hello.txt in the root
+if [ -f $1/.heroku-private-build.yml ]; then
+  echo "Private buildpack detected."
+  exit 0
+else
+  exit 1
+fi
