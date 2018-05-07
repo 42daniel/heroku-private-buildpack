@@ -34,6 +34,7 @@ mv $CURFILES data
 REPO=$(cat $BUILD_DIR/.heroku-private-build.lst)
 echo Pulling $REPO
 git clone $REPO $BUILD_DIR/app
+ls -lrt $REPO $BUILD_DIR/app
 
 
 
