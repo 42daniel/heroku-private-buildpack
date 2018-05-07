@@ -23,8 +23,6 @@ echo "ENV_DIR"
 echo  $ENV_DIR
 ls $ENV_DIR
 
-sh ./scripts/add-sshkey.sh $ENV_DIR
-
 # first move files in build directory to data
 cd $BUILD_DIR
 CURFILES=$(ls .)
