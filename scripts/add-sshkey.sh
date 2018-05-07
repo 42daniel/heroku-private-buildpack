@@ -1,6 +1,6 @@
 env_dir=${1:-}
 ssh_key_file=${env_dir}/BUILDPACK_SSH_KEY
-GIT_SSH_KEY= $(cat ${ssh_key_file})
+GIT_SSH_KEY=$(cat ${ssh_key_file})
 
 if [ "$GIT_SSH_KEY" != "" ]; then
       echo "Detected SSH key for git. Adding SSH config" >&1
