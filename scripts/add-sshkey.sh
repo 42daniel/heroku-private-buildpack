@@ -23,7 +23,7 @@ if [ "$GIT_SSH_KEY" != "" ]; then
       chmod 400 ~/.ssh/deploy_key
 
       # Setup the ssh config file.
-      echo -e "Host github.com\n"\
+          echo "Host github.com\n"\
               " IdentityFile ~/.ssh/deploy_key\n"\
               " IdentitiesOnly yes\n"\
               " UserKnownHostsFile=/dev/null\n"\
