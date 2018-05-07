@@ -5,7 +5,7 @@ echo in comile script
 set -o errexit    # always exit on error
 set -o pipefail   # don't ignore exit codes when piping output
 set -o posix      # more strict failures in subshells
-#set -x          # enable debugging
+set -x          # enable debugging
 
 # Configure directories
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
@@ -38,6 +38,7 @@ ls -lrt $REPO $BUILD_DIR/app
 
 #call the apps  compile script of the downloaded repository.
 if [ -f $1/app/bin/compile ]; then
+    echo "Calling app compile script $BUILD_DIR/app/bin/compile"
     $BUILD_DIR/app/bin/compile
     exit $?
 else
