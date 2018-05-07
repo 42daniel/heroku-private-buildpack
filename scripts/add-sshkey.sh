@@ -1,6 +1,4 @@
 
-set -x          # enable debugging
-
 env_dir=${1:-}
 ssh_key_file=${env_dir}/BUILDPACK_SSH_KEY
 GIT_SSH_KEY=$(cat ${ssh_key_file})
