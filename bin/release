@@ -3,10 +3,8 @@
 
 # this pack is valid for apps with a hello.txt in the root
 if [ -f $1/app/bin/release ]; then
-  echo "Executing package release file "
   $1/bin/release
   exit $?
 else
-  echo "No bin/release file in downloaded package"
   exit 1
 fi
