@@ -25,6 +25,9 @@ set -o pipefail   # don't ignore exit codes when piping output
 set -o posix      # more strict failures in subshells
 # set -x          # enable debugging
 
+echo build user is `whoami`
+ls -lrta ~
+
 # Configure directories
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
 BUILD_DIR=${1:-}
