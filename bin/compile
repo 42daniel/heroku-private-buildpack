@@ -31,11 +31,16 @@ BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
+echo "ENV_DIR"
+echo  $ENV_DIR
+ls $ENV_DIR
+
 sh ./scripts/add-sshkey.sh $ENV_DIR
 
 # first move files in build directory to data
 cd $BUILD_DIR
 CURFILES=$(ls .)
+echo moving "${CURFILES} to $BUILD_DIR/data"
 mkdir data
 mv $CURFILES data
 

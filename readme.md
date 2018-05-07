@@ -19,7 +19,7 @@ To use:-
 
 3. Add the base64 enocded deploy key to the BUILDPACK_SSH_KEY env variable
     
-    heroku config:set BUILDPACK_SSH_KEY=<build key>
+   heroku config:set BUILDPACK_SSH_KEY=$(cat path/to/your/keys/id_rsa | base64)
     
     
 Then push to heroku.
